@@ -1,0 +1,14 @@
+---
+  - name: Example # <- this is play name
+    hosts: localhost # <- this is the target hosts
+    tasks: 
+      - name: Check Memory # <- name of task 1
+        command: free -h
+      - name: Check Disk storage # <- name of task 2
+        command: df -h
+      - name: Check Server OS # <- name of task 3
+        command: cat /etc/os-release
+      - name: Check server hostname # <- name of task 4
+        command: cat /etc/hostname
+      - name: Read /etc/passwd file # <- name of task 5
+        command: cat /etc/passwd
